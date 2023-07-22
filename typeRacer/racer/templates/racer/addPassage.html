@@ -1,0 +1,29 @@
+{% extends 'racer/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'racer/forms.css' %}">
+{% endblock style %}
+
+{% block title %}
+Add Passage
+{% endblock title %}
+
+{% block content %}
+    <main class="d-flex flex-column justify-content-center align-items-center" style="min-height: calc(100vh - 56px);">
+        <div class="cnt">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Add A Passage</legend>
+                    {{ form|crispy }}
+                </fieldset>
+
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Add Passage</button>
+                </div>
+            </form>
+        </div>
+    </main>
+{% endblock content %}

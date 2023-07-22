@@ -1,0 +1,13 @@
+
+.cnt {
+    border-radius: 20px;
+    border: solid 2px black;
+    padding: 30px;
+    max-width: calc(100vw - 100px);
+    min-width: 50%;
+    box-sizing: border-box;
+}
+
+.btn-outline-info {
+    margin-top: 1rem;
+}

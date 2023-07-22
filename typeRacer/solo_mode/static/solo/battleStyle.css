@@ -1,0 +1,27 @@
+
+.cnt {
+    border-radius: 20px;
+    border: solid 2px black;
+    padding: 30px;
+    max-width: calc(100vw - 100px);
+    min-width: 50%;
+    box-sizing: border-box;
+    font-size: 2rem;
+}
+
+.top {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#battleText {
+    margin: 20px 0;
+}
+
+#battleTimer {
+    padding: 10px;
+    border: solid 1px black;
+}

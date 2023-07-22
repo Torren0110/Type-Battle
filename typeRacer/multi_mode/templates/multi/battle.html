@@ -1,0 +1,79 @@
+{% extends 'multi/base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'multi/battleStyle.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+{% endblock style %}
+
+{% block title %}
+Multiplayer Battle
+{% endblock title %}
+
+{% block content %}
+    <main class="d-flex flex-column align-items-center" style="min-height: calc(100vh - 56px);">
+        <div class="cnt mb-3 mt-5">
+            <h3>Opponents</h3>
+            <div class="cnt-oponents" id="opponents">
+                <div class="opponent">
+                    <h4>U name </h4>
+                    Progress: 50% <br/>
+                    WPM: 30
+                </div>
+                <div class="opponent">
+                    <h4>U name </h4>
+                    Progress: 50% <br/>
+                    WPM: 30
+                </div>
+                <div class="opponent">
+                    <h4>U name </h4>
+                    Progress: 50% <br/>
+                    WPM: 30
+                </div>
+                <div class="opponent">
+                    <h4>U name </h4>
+                    Progress: 50% <br/>
+                    WPM: 30
+                </div>
+            </div>
+        </div>
+
+        <div class="cnt">
+            <div class="top">
+                <div id="progress1">Progress : 0%</div>
+                <div id="battleTimer">Time to battle : {{ countDown }}</div>
+            </div>
+            <div id="battleText">
+                {{ battleText }}
+            </div>
+
+            <input id="inputText" type="text" placeholder="Enter Text Here When the race starts.." disabled>
+            
+            <button onClick="endBattle()">End Battle</button>
+
+            <div id="battleResult"></div>
+        </div>
+
+        <div class="cnt mb-3 mt-5">
+            <h3>Leaderboard</h3>
+            <ol id="battleRanking">
+                <li>Player 1</li>
+                <li>Player 2</li>
+                <li>Player 3</li>
+            </ol>
+        </div>
+        
+    </main>
+
+{% endblock content %}
+
+{% block script %}
+    <script>
+        const uid = {{ user.id }};
+        var countDownTime = {{ countDown }};
+        const uname = "{{ user }}";
+    </script>
+
+    <script src="{% static 'multi/battleScript.js' %}">
+    </script>
+{% endblock script %}

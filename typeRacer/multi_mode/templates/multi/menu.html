@@ -1,0 +1,58 @@
+{% extends 'multi/base.html' %}
+{% load static %}
+
+{% block title %}
+    Multi Mode
+{% endblock title %}
+
+{% block content %}
+
+    <main class="d-flex flex-column justify-content-around align-items-center" style="min-height: calc(100vh - 56px);">
+        <div class="card m-5" style="width: 19rem;">
+            <img src="{% static 'racer/multi-logo.jpg' %}" class="card-img-top" alt="MultiPlayer Mode Logo">
+            <div class="card-body">
+                <h5> Multiplayer Mode </h5>
+                <hr>
+                <div class="card-text text-center">
+                    <div class="dropdown">
+                        <a id="selected" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Difficultly
+                        </a>
+                    
+                        <ul class="dropdown-menu" style="user-select: none;">
+                        <li><a class="dropdown-item">Easy</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Hard</a></li>
+                        </ul>
+                    </div>
+                    
+                    <button onClick="begin()" type="button" class="btn btn-primary m-2">Battle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- <h1>Multiplayer Mode</h1>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="dropdown">
+                <a id="selected" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select Difficultly
+                </a>
+            
+                <ul class="dropdown-menu" style="user-select: none;">
+                <li><a class="dropdown-item">Easy</a></li>
+                <li><a class="dropdown-item">Medium</a></li>
+                <li><a class="dropdown-item">Hard</a></li>
+                </ul>
+            </div>
+            
+            <button onClick="begin()" type="button" class="btn btn-primary m-5">Battle</button>
+        </div> -->
+    </main>
+
+{% endblock content %}
+
+
+{% block script %}
+    <script src="{% static 'multi/script.js' %}"></script>
+{% endblock script %}

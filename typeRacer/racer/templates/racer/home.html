@@ -1,0 +1,40 @@
+{% extends 'racer/base.html' %}
+{% load static %}
+
+{% block title %}
+
+Home
+
+{% endblock title %}
+
+{% block content %}
+
+<main class="d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 56px);">
+    <div class="card m-5" style="width: 18rem;">
+        <a href="{% url 'solo-menu' %}" style="text-decoration: none; color: inherit;">
+        <img src="{% static 'racer/solo-logo.jpg' %}" class="card-img-top" alt="Solo Mode Logo">
+        <hr>
+        <div class="card-body">
+            <h5> Solo Mode </h5>
+            <p class="card-text">
+                Here You can practice alone to hone your typing skills.
+            </p>
+        </div>
+        </a>
+    </div>
+
+    <div class="card m-5" style="width: 18rem;">
+        <a href="{% url 'multi-menu' %}" style="text-decoration: none; color: inherit;">
+        <img src="{% static 'racer/multi-logo.jpg' %}" class="card-img-top" alt="MultiPlayer Mode Logo">
+        <hr>
+        <div class="card-body">
+            <h5> Multiplayer Mode </h5>
+            <p class="card-text">
+                Battle against other players to see where you stant against your peers.
+            </p>
+        </div>
+        </a>
+    </div>
+</main>
+
+{% endblock content %}

@@ -1,0 +1,58 @@
+{% extends 'solo/base.html' %}
+{% load static %}
+
+{% block title %}
+    Solo Mode
+{% endblock title %}
+
+{% block content %}
+
+    <main class="d-flex flex-column justify-content-around align-items-center" style="min-height: calc(100vh - 56px);">
+        <div class="card m-5" style="width: 19rem;">
+            <img src="{% static 'racer/solo-logo.jpg' %}" class="card-img-top" alt="Solo Mode Logo">
+            <div class="card-body">
+                <h5> Solo Mode </h5>
+                <hr>
+                <div class="card-text text-center">
+                    <div class="dropdown">
+                        <a id="selected" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Difficultly
+                        </a>
+                    
+                        <ul class="dropdown-menu" style="user-select: none;">
+                        <li><a class="dropdown-item" href="#">Easy</a></li>
+                        <li><a class="dropdown-item">Medium</a></li>
+                        <li><a class="dropdown-item">Hard</a></li>
+                        <li><a class="dropdown-item">God Mode</a></li>
+                        </ul>
+                    </div>
+        
+                    <button onClick="begin()" type="button" class="btn btn-primary m-2">Start Practice</button>
+                </div>
+            </div>
+        </div>
+        <!-- <h1>Solo Mode</h1>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="dropdown">
+                <a id="selected" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select Difficultly
+                </a>
+            
+                <ul class="dropdown-menu" style="user-select: none;">
+                <li><a class="dropdown-item" href="#">Easy</a></li>
+                <li><a class="dropdown-item">Medium</a></li>
+                <li><a class="dropdown-item">Hard</a></li>
+                <li><a class="dropdown-item">God Mode</a></li>
+                </ul>
+            </div>
+
+            <button onClick="begin()" type="button" class="btn btn-primary m-5">Start Practice</button>
+        </div> -->
+    </main>
+
+{% endblock content %}
+
+
+{% block script %}
+    <script src="{% static 'solo/script.js' %}"></script>
+{% endblock script %}

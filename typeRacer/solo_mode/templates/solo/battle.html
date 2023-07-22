@@ -1,0 +1,41 @@
+{% extends 'solo/base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'solo/battleStyle.css' %}">
+{% endblock style %}
+
+{% block title %}
+Solo Battle
+{% endblock title %}
+
+{% block content %}
+
+    <main class="d-flex flex-column justify-content-center align-items-center" style="min-height: calc(100vh - 56px);">
+        <div class="cnt">
+            <div class="top">
+                <div id="progress1">Progress : 0%</div>
+                <div id="battleTimer">Time to battle : 3</div>
+            </div>
+            <div id="battleText">
+                {{ battleText }}
+            </div>
+
+            <input id="inputText" type="text" placeholder="Enter Text Here When the race starts.." disabled>
+            
+            <button onClick="endBattle()">End Battle</button>
+
+            <div id="battleResult"></div>
+        </div>
+    </main>
+
+{% endblock content %}
+
+{% block script %}
+    <script>
+        
+    </script>
+
+    <script src="{% static 'solo/raceScript.js' %}">
+    </script>
+{% endblock script %}
